@@ -18,6 +18,7 @@ function Hero() {
           className="p-2 btn btn-primary fs-5 mb-5"
           style={{ width: "20%", margin: "0 auto" }}
         >
+        
           Signup Now
         </button>
       </div>

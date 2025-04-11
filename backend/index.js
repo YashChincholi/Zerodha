@@ -71,7 +71,7 @@ app.use(bodyParser.json());
 //     },
 //     {
 //       name: "M&M",
-//       qty: 2,
+//       qty: 2,npm
 //       avg: 809.9,
 //       price: 779.8,
 //       net: "-3.72%",
