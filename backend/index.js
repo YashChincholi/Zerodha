@@ -210,8 +210,18 @@ app.post("/newOrder", async (req, res) => {
   res.send("Order saved!");
 });
 
-app.listen(PORT, () => {
-  console.log("App started!");
-  mongoose.connect(uri);
-  console.log("DB started!");
-});
+mongoose
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("DB connected successfully!");
+    app.listen(PORT, () =>
+      console.log(`Server is running on port ${PORT}`)
+    );
+  })
+  .catch((err) => {
+    console.error("DB connection error:", err);
+  });
+  
